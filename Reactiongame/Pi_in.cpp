@@ -4,6 +4,7 @@
 Pi_Input::Pi_Input(bool initial_state, int pin_num):indicator_state_{ initial_state }, pin_num_{ pin_num }
 {
 	pinMode(pin_num_, INPUT);
+	
 	pullUpDnControl(pin_num_, PUD_DOWN);
 }
 
