@@ -5,6 +5,8 @@
 class Io_manager
 {
 public:
+	Io_manager();
+
 	void reserve(int pin);
 
 	void release(int pin);

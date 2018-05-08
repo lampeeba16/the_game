@@ -1,6 +1,7 @@
 #include <wiringPi.h>
 #include "Pi_in.h"
 #include "Pi_out.h"
+#include "iomanager.h"
 #include <iostream>
 #include <string>
 #include <random>
@@ -20,6 +21,8 @@
 int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is good. more than 60 is bad
 {
 	wiringPiSetup();
+
+	Io_manager Io_m_pi();
 
 	Pi_out LED_Player_1(LOW, PIN_LED_P1); 
 	Pi_out LED_Player_2(LOW, PIN_LED_P2); 
