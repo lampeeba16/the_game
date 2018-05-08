@@ -8,4 +8,6 @@ public:
 private:
 	bool indicator_state_; // MFA never used, throw this out!
 	int pin_num_;
+
+	//Override deconstructor
 };

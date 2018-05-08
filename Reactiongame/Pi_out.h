@@ -14,4 +14,6 @@ public:
 private:
 	bool state_;
 	int pin_num_;
+
+	//Override deconstructor
 };

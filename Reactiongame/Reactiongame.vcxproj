@@ -51,6 +51,7 @@
     </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="iomanager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="my_input.cpp" />
     <ClCompile Include="my_output.cpp" />
@@ -58,6 +59,7 @@
     <ClCompile Include="Pi_out.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="iomanager.h" />
     <ClInclude Include="my_input.h" />
     <ClInclude Include="my_output.h" />
     <ClInclude Include="Pi_in.h" />
