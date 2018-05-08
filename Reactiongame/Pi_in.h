@@ -1,6 +1,7 @@
 #pragma once
 #include "my_input.h"
 #include "iomanager.h"
+#include <vector>
 
 class Pi_Input final : public IInput {
 public:

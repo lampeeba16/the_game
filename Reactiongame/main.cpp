@@ -2,6 +2,7 @@
 #include "Pi_in.h"
 #include "Pi_out.h"
 #include "iomanager.h"
+#include <vector>
 #include <iostream>
 #include <string>
 #include <random>
@@ -22,13 +23,18 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 {
 	wiringPiSetup();
 
-	Io_manager Io_m_pi();
+	Io_manager Io_m_pi;
+	Io_manager *TOP;
+	TOP = &Io_m_pi;
 
 	Pi_out LED_Player_1(LOW, PIN_LED_P1); 
 	Pi_out LED_Player_2(LOW, PIN_LED_P2); 
 	Pi_out LED_ST(LOW, PIN_LED_ST);
-	Pi_Input Button_P1(TRUE, PIN_B_P1); 
-	Pi_Input Button_P2(TRUE, PIN_B_P2);
+
+	Pi_Input Button_P1(*TOP, TRUE, PIN_B_P1);
+	Pi_Input Button_P2(*TOP, TRUE, PIN_B_P2);
+	//Pi_Input Button_P1(TRUE, PIN_B_P1); 
+	//Pi_Input Button_P2(TRUE, PIN_B_P2);
 
 	int rounds = 0;
 	int round_counter = 0;

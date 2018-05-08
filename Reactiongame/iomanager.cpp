@@ -1,6 +1,6 @@
 #include "iomanager.h"
 #include <algorithm>
-
+#include <vector>
 
 
 Io_manager::Io_manager()
