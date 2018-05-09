@@ -4,37 +4,41 @@
 #include "iomanager.h"
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <random>
 #include "json.hpp"
-//#include "json.hpp"
+
 // LED-PIN - wiringPi-PIN 0 ist BCM_GPIO 17.
 // Wir müssen bei der Initialisierung mit wiringPiSetupSys die BCM-Nummerierung verwenden.
 // Wenn Sie eine andere PIN-Nummer wählen, verwenden Sie die BCM-Nummerierung, und
 // aktualisieren Sie die Eigenschaftenseiten – Buildereignisse – Remote-Postbuildereignisbefehl 
 // der den GPIO-Export für die Einrichtung für wiringPiSetupSys verwendet.
-#define	PIN_LED_P1	8
-#define	PIN_LED_P2 9
-#define PIN_LED_ST 0
-#define PIN_B_P1 15
-#define PIN_B_P2 16
+
 
 //By Marc Lampee Baumgartner ad Lukas Lösel
 
 int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is good. more than 60 is bad
 {
+
+	using json = nlohmann::json;
+	//json file lesen
+	std::ifstream i("pins.json");
+	json j;
+	i >> j;
+
 	wiringPiSetup();
 
 	Io_manager Io_m_pi;
 	Io_manager *TOP;
 	TOP = &Io_m_pi;
 
-	Pi_out LED_Player_1(*TOP, LOW, PIN_LED_P1);
-	Pi_out LED_Player_2(*TOP, LOW, PIN_LED_P2);
-	Pi_out LED_ST(*TOP, LOW, PIN_LED_ST);
+	Pi_out LED_Player_1(*TOP, LOW, j["p1_led"].get<int>());
+	Pi_out LED_Player_2(*TOP, LOW, j["p2_led"].get<int>());
+	Pi_out LED_ST(*TOP, LOW, j["state"].get<int>());
 
-	Pi_Input Button_P1(*TOP, TRUE, PIN_B_P1);
-	Pi_Input Button_P2(*TOP, TRUE, PIN_B_P2);
+	Pi_Input Button_P1(*TOP, TRUE, j["p1_button"].get<int>());
+	Pi_Input Button_P2(*TOP, TRUE, j["p2_button"].get<int>());
 
 	int rounds = 0;
 	int round_counter = 0;
@@ -64,7 +68,6 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 
 	delay(5000);
 	random_delay = rand() % 3001;
-	//LED_ST.set_1(); nochmal testen was das hier soll
 
 	while (round_counter<rounds)
 	{
