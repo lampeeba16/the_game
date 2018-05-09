@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <algorithm>
 //Zum festlegen welche Pins schon vergeben sind und welche nicht
 class Io_manager
 {
@@ -13,5 +14,5 @@ public:
 
 	bool check(int pin);
 private:
-	static std::vector<int> reserved_pins_;
+	std::vector<int> reserved_pins_;
 };

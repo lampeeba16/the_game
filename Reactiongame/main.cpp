@@ -33,8 +33,6 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 
 	Pi_Input Button_P1(*TOP, TRUE, PIN_B_P1);
 	Pi_Input Button_P2(*TOP, TRUE, PIN_B_P2);
-	//Pi_Input Button_P1(TRUE, PIN_B_P1); 
-	//Pi_Input Button_P2(TRUE, PIN_B_P2);
 
 	int rounds = 0;
 	int round_counter = 0;
