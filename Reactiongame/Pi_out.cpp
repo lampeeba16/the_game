@@ -1,14 +1,22 @@
 #include "Pi_out.h"
 #include <iostream>
 #include <wiringPi.h>
+#include "iomanager.h"
 
 
 
-Pi_out::Pi_out(bool initial_state, int pin_num) :state_{ initial_state }, pin_num_{ pin_num }
+Pi_out::Pi_out(Io_manager &Io_manager, bool initial_state, int pin_num) :Io_manager_{ Io_manager }, state_{ initial_state }, pin_num_{ pin_num }
 {
-	//check auf PIN nummer --> wenn vergeben abbrechen
-	//Falls funzt--> reserve pin
-	pinMode(pin_num_, OUTPUT);
+	if (Io_manager_.check(pin_num_))//Schaun ob pin belegt ist
+	{
+		std::cout << "ERROR PIN BEREITS BELEGT!!" << std::endl;
+		return;
+	}
+	else
+	{
+		Io_manager_.reserve(pin_num_);
+		pinMode(pin_num_, OUTPUT);
+	}
 }
 
 void Pi_out::set_1()

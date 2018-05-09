@@ -11,6 +11,7 @@ Io_manager::Io_manager()
 void Io_manager::reserve(int pin)
 {
 	reserved_pins_.push_back(pin);
+	std::cout << "Pin " << pin << " Reserviert" << std::endl;
 }
 
 void Io_manager::release(int pin)

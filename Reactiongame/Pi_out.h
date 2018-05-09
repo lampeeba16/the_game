@@ -1,9 +1,10 @@
 #pragma once
 #include "my_output.h"
+#include "iomanager.h"
 
 class Pi_out final : public IOutput {
 public:
-	Pi_out(bool initial_state = false, int pin_num = 0);
+	Pi_out(Io_manager &Io_manager, bool initial_state = false, int pin_num = 0);
 
 	virtual void set_1() override;
 
@@ -14,6 +15,7 @@ public:
 private:
 	bool state_;
 	int pin_num_;
+	Io_manager &Io_manager_;
 
 	//Override deconstructor
 };

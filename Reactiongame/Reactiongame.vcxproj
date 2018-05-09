@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="iomanager.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="my_input.h" />
     <ClInclude Include="my_output.h" />
     <ClInclude Include="Pi_in.h" />

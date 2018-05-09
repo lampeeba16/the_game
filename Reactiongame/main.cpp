@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include "json.hpp"
+//#include "json.hpp"
 // LED-PIN - wiringPi-PIN 0 ist BCM_GPIO 17.
 // Wir müssen bei der Initialisierung mit wiringPiSetupSys die BCM-Nummerierung verwenden.
 // Wenn Sie eine andere PIN-Nummer wählen, verwenden Sie die BCM-Nummerierung, und
@@ -27,9 +29,9 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 	Io_manager *TOP;
 	TOP = &Io_m_pi;
 
-	Pi_out LED_Player_1(LOW, PIN_LED_P1); 
-	Pi_out LED_Player_2(LOW, PIN_LED_P2); 
-	Pi_out LED_ST(LOW, PIN_LED_ST);
+	Pi_out LED_Player_1(*TOP, LOW, PIN_LED_P1);
+	Pi_out LED_Player_2(*TOP, LOW, PIN_LED_P2);
+	Pi_out LED_ST(*TOP, LOW, PIN_LED_ST);
 
 	Pi_Input Button_P1(*TOP, TRUE, PIN_B_P1);
 	Pi_Input Button_P2(*TOP, TRUE, PIN_B_P2);
