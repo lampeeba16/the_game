@@ -15,4 +15,5 @@ public:
 	bool check(int pin);
 private:
 	std::vector<int> reserved_pins_;
+	
 };

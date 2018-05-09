@@ -51,6 +51,7 @@
     </RemotePostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="buttoncheck.cpp" />
     <ClCompile Include="iomanager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="my_input.cpp" />
@@ -59,6 +60,7 @@
     <ClCompile Include="Pi_out.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="buttoncheck.h" />
     <ClInclude Include="iomanager.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="my_input.h" />
