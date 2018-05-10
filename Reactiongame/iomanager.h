@@ -14,6 +14,6 @@ public:
 
 	bool check(int pin);
 private:
-	std::vector<int> reserved_pins_;
+	static std::vector<int> reserved_pins_;
 	
 };
