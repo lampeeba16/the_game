@@ -3,10 +3,11 @@
 #include <vector>
 #include <iostream>
 
+std::vector<int> Io_manager::reserved_pins_{};
 
-Io_manager::Io_manager() 
+Io_manager::Io_manager()
 {
-	
+
 }
 
 void Io_manager::reserve(int pin)
