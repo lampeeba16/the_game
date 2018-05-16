@@ -13,7 +13,11 @@ namespace TestReactionGame
 		TEST_METHOD(Test_construction)
 		{
 			Io_manager Tester;
-			Assert::IsFalse(Tester.check(1));//Gibt false zurück wenn das Element nicht vorhanden ist --> wird hier getestet.
+			Assert::IsFalse(Tester.check(1));
+			Tester.reserve(1);
+			Assert::IsTrue(Tester.check(1));//Gibt false zurück wenn das Element nicht vorhanden ist --> wird hier getestet.
+			Tester.release(1);
+			Assert::IsFalse(Tester.check(1));
 		}
 
 	};
