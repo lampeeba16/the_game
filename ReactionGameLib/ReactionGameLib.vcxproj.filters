@@ -36,6 +36,9 @@
     <ClCompile Include="..\Reactiongame\WinpiEmulator.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\Reactiongame\my_input.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Reactiongame\buttoncheck.h">
@@ -63,6 +66,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="..\Reactiongame\winpi.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Reactiongame\WinpiEmulator.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
