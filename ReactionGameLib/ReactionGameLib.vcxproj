@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Reactiongame\buttoncheck.cpp" />
     <ClCompile Include="..\Reactiongame\iomanager.cpp" />
     <ClCompile Include="..\Reactiongame\my_input.cpp" />
     <ClCompile Include="..\Reactiongame\my_output.cpp" />

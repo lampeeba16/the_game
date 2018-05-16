@@ -19,12 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Reactiongame\buttoncheck.cpp" />
     <ClCompile Include="..\Reactiongame\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReactionGameLib\ReactionGameLib.vcxproj">
       <Project>{1b1bc7a2-63c5-4830-8d95-68ac10bf0311}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Reactiongame\buttoncheck.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Reactiongame\buttoncheck.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\Reactiongame\iomanager.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
