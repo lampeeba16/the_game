@@ -68,7 +68,5 @@ void buttoncheck(Pi_out LED_Player_1,Pi_out LED_Player_2, Pi_out LED_ST, Pi_Inpu
 		cyclecount = 0;
 		delay(5000);
 		random_delay = rand() % 3001;
-		std::cout << "pft" << std::endl;
 	}
-	std::cout << "Buttoncheck rounds:" << rounds << "roundcounter:" << round_counter << std::endl;
 }

@@ -77,7 +77,6 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 		{
 			LED_ST.set_1();
 		}
-		std::cout << "rounds:" << rounds << "roundcounter:" << round_counter << std::endl;
 		buttoncheck(LED_Player_1, LED_Player_2, LED_ST, Button_P1, Button_P2);
 		
 		cyclecount++;
