@@ -1,6 +1,6 @@
 #include "Pi_out.h"
 #include <iostream>
-#include <wiringPi.h>
+#include "piproxy.h"
 #include "iomanager.h"
 
 

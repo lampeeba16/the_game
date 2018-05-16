@@ -1,4 +1,4 @@
-#include <wiringPi.h>
+#include "piproxy.h"
 #include "Pi_in.h"
 #include "Pi_out.h"
 #include <iostream>
@@ -13,14 +13,7 @@ extern int wincount_1 = 0;
 extern int wincount_2 = 0;
 extern int random_delay = 0;
 extern int cyclecount = 0;
-/*
-extern Pi_out LED_Player_1;
-extern Pi_out LED_Player_2;
-extern Pi_out LED_ST;
 
-extern Pi_Input Button_P1;
-extern Pi_Input Button_P2;
-*/
 
 void buttoncheck(Pi_out LED_Player_1,Pi_out LED_Player_2, Pi_out LED_ST, Pi_Input Button_P1, Pi_Input Button_P2)
 {

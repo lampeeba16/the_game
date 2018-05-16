@@ -1,5 +1,5 @@
 #include "Pi_in.h"
-#include <wiringPi.h>
+#include "piproxy.h"
 #include "iomanager.h"
 #include <iostream>
 #include <vector>

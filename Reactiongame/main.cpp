@@ -1,4 +1,4 @@
-#include <wiringPi.h>
+#include "piproxy.h"
 #include "Pi_in.h"
 #include "Pi_out.h"
 #include "iomanager.h"
@@ -77,7 +77,7 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 			LED_ST.set_1();
 		}
 
-		buttoncheck(LED_Player_1,LED_Player_2,LED_ST,Button_P1, Button_P2);
+		buttoncheck(LED_Player_1, LED_Player_2, LED_ST, Button_P1, Button_P2);
 		
 		cyclecount++;
 	}

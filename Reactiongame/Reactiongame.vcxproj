@@ -65,6 +65,7 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="my_input.h" />
     <ClInclude Include="my_output.h" />
+    <ClInclude Include="piproxy.h" />
     <ClInclude Include="Pi_in.h" />
     <ClInclude Include="Pi_out.h" />
   </ItemGroup>
