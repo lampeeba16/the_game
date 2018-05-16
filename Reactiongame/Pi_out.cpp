@@ -21,7 +21,7 @@ Pi_out::Pi_out(Io_manager &Io_manager, bool initial_state, int pin_num) :Io_mana
 
 void Pi_out::set_1()
 {
-	if (state_) {
+	if (digitalRead(pin_num_)) {
 		return;
 	}
 	digitalWrite(pin_num_, HIGH);
@@ -30,7 +30,7 @@ void Pi_out::set_1()
 
 void Pi_out::set_0()
 {
-	if (!state_) {
+	if (!digitalRead(pin_num_)) {
 		return;
 	}
 	digitalWrite(pin_num_, LOW);

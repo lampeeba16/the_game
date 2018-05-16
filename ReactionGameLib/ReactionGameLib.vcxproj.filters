@@ -38,9 +38,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Reactiongame\buttoncheck.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="..\Reactiongame\iomanager.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>

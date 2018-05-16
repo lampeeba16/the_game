@@ -19,6 +19,16 @@
 
 //By Marc Lampee Baumgartner ad Lukas Lösel
 
+int rounds = 0;
+int round_counter = 0;
+
+int wincount_1 = 0;
+int wincount_2 = 0;
+int random_delay = 0;
+int cyclecount = 0;
+
+
+
 int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is good. more than 60 is bad
 {
 
@@ -39,14 +49,6 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 	Pi_Input Button_P1(Io_m_pi, TRUE, j["p1_button"].get<int>());
 	Pi_Input Button_P2(Io_m_pi, TRUE, j["p2_button"].get<int>());
 
-	int rounds = 0;
-	int round_counter = 0;
-
-	int wincount_1 = 0;
-	int wincount_2 = 0;
-	int random_delay = 0;
-	int cyclecount = 0;
-
 	std::string player1;
 	std::string player2;
 
@@ -60,7 +62,6 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 		std::cout << "\nSeas, wie vülle rundn magstn spülln? " << std::endl;
 		std::cin >> rounds;
 	}
-
 	std::cout << "\nJetzt gehts um!" << std::endl;
 	LED_Player_1.set_0();
 	LED_Player_2.set_0();
@@ -76,7 +77,7 @@ int main(void) // MFA split this in a bunch of shorter methods, 20-30 lines is g
 		{
 			LED_ST.set_1();
 		}
-
+		std::cout << "rounds:" << rounds << "roundcounter:" << round_counter << std::endl;
 		buttoncheck(LED_Player_1, LED_Player_2, LED_ST, Button_P1, Button_P2);
 		
 		cyclecount++;

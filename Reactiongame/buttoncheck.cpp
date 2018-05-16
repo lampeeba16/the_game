@@ -6,13 +6,13 @@
 #include <random>
 #include "json.hpp"
 
-extern int rounds = 0;
-extern int round_counter = 0;
+extern int rounds;
+extern int round_counter;
 
-extern int wincount_1 = 0;
-extern int wincount_2 = 0;
-extern int random_delay = 0;
-extern int cyclecount = 0;
+extern int wincount_1;
+extern int wincount_2;
+extern int random_delay;
+extern int cyclecount;
 
 
 void buttoncheck(Pi_out LED_Player_1,Pi_out LED_Player_2, Pi_out LED_ST, Pi_Input Button_P1, Pi_Input Button_P2)
@@ -42,7 +42,7 @@ void buttoncheck(Pi_out LED_Player_1,Pi_out LED_Player_2, Pi_out LED_ST, Pi_Inpu
 		cyclecount = 0;
 		delay(5000);
 		random_delay = rand() % 3001;
-		std::cout << "prt" << std::endl;
+		
 	}
 	else if (Button_P2.get_state())
 	{
@@ -70,4 +70,5 @@ void buttoncheck(Pi_out LED_Player_1,Pi_out LED_Player_2, Pi_out LED_ST, Pi_Inpu
 		random_delay = rand() % 3001;
 		std::cout << "pft" << std::endl;
 	}
+	std::cout << "Buttoncheck rounds:" << rounds << "roundcounter:" << round_counter << std::endl;
 }

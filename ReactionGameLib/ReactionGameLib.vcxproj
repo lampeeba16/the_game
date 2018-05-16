@@ -28,7 +28,6 @@
     <ClCompile Include="..\Reactiongame\WinpiEmulator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Reactiongame\buttoncheck.h" />
     <ClInclude Include="..\Reactiongame\iomanager.h" />
     <ClInclude Include="..\Reactiongame\json.hpp" />
     <ClInclude Include="..\Reactiongame\my_input.h" />
